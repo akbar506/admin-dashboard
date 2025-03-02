@@ -81,8 +81,9 @@ export default function RootLayoutClient({
         { path: "/", label: "Dashboard", icon: Home },
         { path: "/analytics", label: "Analytics", icon: BarChart3 },
         { path: "/users", label: "Users", icon: Users },
-        { path: "/messages", label: "Messages", icon: MessageSquare },
+        { path: "/orders", label: "Orders", icon: Package },
         { path: "/calendar", label: "Calendar", icon: Calendar },
+        { path: "/messages", label: "Messages", icon: MessageSquare },
         { path: "/reports", label: "Reports", icon: FileText },
     ]
 
@@ -131,8 +132,8 @@ export default function RootLayoutClient({
                                             <Link
                                                 href={item.path}
                                                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                    ? "bg-primary/10 text-primary font-medium"
-                                                    : "hover:bg-muted text-muted-foreground font-medium"
+                                                        ? "bg-primary/10 text-primary font-medium"
+                                                        : "hover:bg-muted text-muted-foreground font-medium"
                                                     }`}
                                                 onClick={() => setActivePath(item.path)}
                                             >
@@ -152,8 +153,8 @@ export default function RootLayoutClient({
                                                     <Link
                                                         href={item.path}
                                                         className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                            ? "bg-primary/10 text-primary font-medium"
-                                                            : "hover:bg-muted text-muted-foreground font-medium"
+                                                                ? "bg-primary/10 text-primary font-medium"
+                                                                : "hover:bg-muted text-muted-foreground font-medium"
                                                             }`}
                                                         onClick={() => setActivePath(item.path)}
                                                     >
@@ -241,10 +242,7 @@ export default function RootLayoutClient({
                             </header>
 
                             {/* Main Content */}
-                            <main className="flex-1 overflow-y-auto bg-muted/30">
-
-                                {children}
-                            </main>
+                            <main className="flex-1 overflow-y-auto bg-muted/30">{children}</main>
                         </div>
 
                         {/* Overlay for mobile when sidebar is open */}
