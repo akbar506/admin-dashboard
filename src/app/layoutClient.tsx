@@ -132,8 +132,8 @@ export default function RootLayoutClient({
                                             <Link
                                                 href={item.path}
                                                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                        ? "bg-primary/10 text-primary font-medium"
-                                                        : "hover:bg-muted text-muted-foreground font-medium"
+                                                    ? "bg-primary/10 text-primary font-medium"
+                                                    : "hover:bg-muted text-muted-foreground font-medium"
                                                     }`}
                                                 onClick={() => setActivePath(item.path)}
                                             >
@@ -153,8 +153,8 @@ export default function RootLayoutClient({
                                                     <Link
                                                         href={item.path}
                                                         className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                                ? "bg-primary/10 text-primary font-medium"
-                                                                : "hover:bg-muted text-muted-foreground font-medium"
+                                                            ? "bg-primary/10 text-primary font-medium"
+                                                            : "hover:bg-muted text-muted-foreground font-medium"
                                                             }`}
                                                         onClick={() => setActivePath(item.path)}
                                                     >

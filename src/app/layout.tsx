@@ -25,9 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <RootLayoutClient
-      children={children}
       geistMono={geistMono}
       geistSans={geistSans}
-    />
+    >
+      {children}
+    </RootLayoutClient>
   );
 }
