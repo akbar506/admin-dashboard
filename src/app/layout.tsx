@@ -24,6 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <RootLayoutClient children={children} />
+    <RootLayoutClient
+      children={children}
+      geistMono={geistMono}
+      geistSans={geistSans}
+    />
   );
 }

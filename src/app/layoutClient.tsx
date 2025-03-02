@@ -35,8 +35,12 @@ import "./globals.css"
 
 export default function RootLayoutClient({
     children,
+    geistSans,
+    geistMono,
 }: {
     children: React.ReactNode
+    geistSans: { variable: string }
+    geistMono: { variable: string }
 }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true)
     const [isMobile, setIsMobile] = useState(false)
@@ -89,7 +93,9 @@ export default function RootLayoutClient({
 
     return (
         <html lang="en">
-            <body>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
                 <div className="flex h-screen bg-background">
                     {/* Vertical Sidebar */}
                     <aside
@@ -119,8 +125,8 @@ export default function RootLayoutClient({
                                         <Link
                                             href={item.path}
                                             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                    ? "bg-primary/10 text-primary font-medium"
-                                                    : "hover:bg-muted text-muted-foreground font-medium"
+                                                ? "bg-primary/10 text-primary font-medium"
+                                                : "hover:bg-muted text-muted-foreground font-medium"
                                                 }`}
                                             onClick={() => setActivePath(item.path)}
                                         >
@@ -140,8 +146,8 @@ export default function RootLayoutClient({
                                                 <Link
                                                     href={item.path}
                                                     className={`flex items-center gap-3 px-3 py-2 text-sm rounded-md ${activePath === item.path
-                                                            ? "bg-primary/10 text-primary font-medium"
-                                                            : "hover:bg-muted text-muted-foreground font-medium"
+                                                        ? "bg-primary/10 text-primary font-medium"
+                                                        : "hover:bg-muted text-muted-foreground font-medium"
                                                         }`}
                                                     onClick={() => setActivePath(item.path)}
                                                 >
